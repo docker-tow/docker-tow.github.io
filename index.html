@@ -3,24 +3,18 @@ layout: default
 ---
 
 <div class="blog-header" style="background-image: url({{ site.cover }})">
-<!--     <div class="blog-header-image" {% if site.cover %}style="background-image: url({{ site.cover }})"{% endif %}>
-        Teaser Image
-    </div> -->
-
-
-<header class="blog-info">
-    {% if site.logo %}
-      <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.logo }}')">{{ site.title }}</a>
-    {% endif %}
-    <h1 class="blog-title">{{ site.title }}</h1>
-    <h2 class="blog-description">{{ site.description }}</h2>
-    <div class="custom-links">
-      <a href="/installation/">Installation</a>
-      <a href="https://github.com/docker-tow/tow/blob/master/docs/introduction.md">Getting Started</a>
-      <a href="/about/">About</a>
-    </div>
-</header>
-
+  <header class="blog-info">
+      {% if site.logo %}
+        <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.logo }}')">{{ site.title }}</a>
+      {% endif %}
+      <h1 class="blog-title">{{ site.title }}</h1>
+      <h2 class="blog-description">{{ site.description }}</h2>
+      <div class="custom-links">
+        <a href="/installation/">Installation</a>
+        <a href="https://github.com/docker-tow/tow/blob/master/docs/introduction.md">Getting Started</a>
+        <a href="/about/">About</a>
+      </div>
+  </header>
 </div>
 <main class="content" role="main">
 

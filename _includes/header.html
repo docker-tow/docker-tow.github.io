@@ -1,3 +1,15 @@
 <!-- header start -->
-<a href="{{ site.url }}" class="btn btn-default logo-readium"><span class="glyphicon glyphicon-home"></span></a>
+<div>
+  <a href="{{ site.url }}" class="btn btn-default logo-readium"><span class="fa fa-2x fa-home"></span></a>
+</div>
+<div class="share-links">
+  {% for social in site.social %}
+    {% if social.url %}
+        <a class="btn btn-default icon-{{ social.icon }}" href="{{ social.url }}">
+          <i class="fa fa-2x fa-{{ social.icon }}"></i>
+        </a>
+        &nbsp;&nbsp;·&nbsp;&nbsp;
+    {% endif %}
+  {% endfor %}
+</div>
 <!-- header end -->

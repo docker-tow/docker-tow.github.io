@@ -25,7 +25,14 @@ $font-sans: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif
 main
   display: block
 
-
+.share-links
+  position: fixed
+  font-size: 14px
+  right: 10px
+  top: 10px
+  z-index: 99
+  .btn
+    color: #666
 
 body
   font-family: $font-sans
@@ -43,17 +50,20 @@ body
   position: fixed
   left: 10px
   top: 10px
-  width: $rs*3
-  height: $rs*2
-  overflow: hidden
   z-index: 99
-  color: #777
-.teaserimage
+  color: #666
+
+.blog-header
   height: 450px
+  width: 100%
   position: relative
-  overflow: hidden
-  background-color: 0000
-  .teaserimage-image
+  // overflow: hidden
+  // background-color: 0000
+  @include box-sizing(border-box)
+  @include respond-to(800)
+    padding: 0 $rs
+  margin: 0 auto
+  .blog-cover
     background-size: cover
     background-position: center
     position: absolute
@@ -61,67 +71,68 @@ body
     left: 0
     right: 0
     bottom: 0
-    z-index: 1
+    z-index: 10
     text-indent: -9999px
-
-.blog-header
-  width: 100%
-  max-width: 640px
-  margin: 0 auto
-  position: relative
-  padding: 0
-  @include box-sizing(border-box)
-  @include respond-to(800)
-    padding: 0 $rs
-  .blog-logo
-    width: $rs*7.5
-    height: $rs*7.5
-    position: absolute
-    top: -$rs*3.75
-    right: 50%
-    margin-right: -$rs*3.75
-    background-size: cover
-    border-radius: 50%
-    z-index: 99
-    text-indent: -9999px
-    border: 3px solid #fff
-    background-color: #fff
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3)
-    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3)
-    box-shadow: 0 1px 1px rgba(0,0,0,0.3)
-  .blog-title
-    margin: 0
-    padding: $rs*5.25 $rs $rs/2
-    font-size: 50px
-    text-align: center
-    font-weight: 700
-    letter-spacing: -2px
-    outline: 0
-    line-height: 50px
-    word-break: break-word
-    color: #333
-  .blog-description
-    margin: 0 0 20px
-    padding: 0 $rs*2
-    font-size: $rs/8*9
-    line-height: 1.5
-    color: #666
-    text-align: center
-    font-weight: 400
-  .custom-links
-    margin: 0 0 50px
-    text-align: center
-    color: #ccc
-    a
-      margin: 0 20px 0
-      text-decoration: none
-      color: #777
-      &:hover
-        color: #333
+  .blog-info
+    width: 100%
+    margin: 0 auto
+    position: relative
+    bottom: -$rs*10
+    z-index: 100
+    padding: 0
+    @include box-sizing(border-box)
+    @include respond-to(800)
+      padding: 0 $rs
+    .blog-logo
+      width: $rs*7.5
+      height: $rs*7.5
+      position: absolute
+      top: -$rs*3.75
+      right: 50%
+      margin-right: -$rs*3.75
+      background-size: cover
+      border-radius: 50%
+      text-indent: -9999px
+      border: 3px solid #fff
+      background-color: #fff
+      -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3)
+      -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3)
+      box-shadow: 0 1px 1px rgba(0,0,0,0.3)
+    .blog-title
+      margin: 0
+      padding: $rs*5.25 $rs $rs/2
+      font-size: 50px
+      text-align: center
+      font-weight: 700
+      letter-spacing: -2px
+      outline: 0
+      line-height: 50px
+      word-break: break-word
+      color: #fff
+    .blog-description
+      margin: 0 0 $rs*2
+      padding: 0 $rs*3
+      font-size: $rs/8*9
+      line-height: 1.5
+      color: #ccc
+      text-align: center
+      font-weight: 400
+    .custom-links
+      margin: 0 0 50px
+      text-align: center
+      a
+        margin: 0 20px 0
+        font-size: 20px
+        text-decoration: none
+        color: #eee
+        &:hover
+          color: #333
 
 .content
   width: 100%
+  position: relative
   max-width: 640px
+  // top: -$rs*15
   margin: 0 auto
   @include box-sizing(border-box)
   @include respond-to(800)
@@ -172,7 +183,7 @@ body
   padding: 16px 0
   span
     color: #b3b3b1
-    font-size: $rs/8*5
+    font-size: $rs/8*8
     text-transform: uppercase
     letter-spacing: 1px
 
@@ -498,12 +509,12 @@ body
           font-weight: 700
           color: #333
 .share
-  text-align: right
+  text-align: left
   padding: 20px 0 0
   a
     text-decoration: none
     color: #bbb
-    padding-left: 12px
+    padding-left: 50px
     .hidden
       display: none
     &:hover

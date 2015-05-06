@@ -1,0 +1,61 @@
+# Build settings
+markdown: redcarpet
+highlighter: pygments
+gems:
+  - jemoji
+
+# Site settings
+title: "Tow"
+description: "Configuration management tool for Docker"
+
+
+email: a-mail@mail.mail
+#blog logo
+logo: "/assets/images/df_logo.jpg"
+# blog cover
+cover: "/assets/images/background_image.png"
+
+organization: "Tow Project"
+
+authors:
+  nyurin:
+    name: "Nikolay Yurin"
+    image: "/assets/images/authors/nyurin.jpg"
+    bio: "DevOps Engineer"
+  akornev:
+    name: "Aleksei Kornev"
+
+paginate:	10
+
+url: "http://tow-project.github.io/"
+baseurl: "/"
+
+# social icons and sharing options
+social:
+  # - icon:	twitter
+  #   url:	https://twitter.com/dirkfabisch
+  #   desc: Follow me on twitter
+  #   share_url: http://twitter.com/share
+  #   share_title: ?text=
+  #   share_link: "&amp;url="
+
+#  - icon:	facebook
+#    url:	https://facebook.com/???
+#    desc: Connect with me facebook
+#    share_url: https://www.facebook.com/sharer.php
+#    share_title: ?t=
+#    share_link: "&amp;u="
+
+  - icon:	github
+    url:	https://github.com/docker-tow
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
+
+#  - icon:	google-plus
+#    url:	https://google.com/???
+#    desc:	Add me on google+
+#    share_url:
+#    share_title:
+#    share_link:
